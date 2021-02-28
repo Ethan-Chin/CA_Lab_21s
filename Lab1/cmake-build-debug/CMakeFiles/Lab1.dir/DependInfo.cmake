@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/data_type_32.c" "/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/data_type_32.c.o"
+  "/home/ethan/文档/CA_21s/Lab1/data_type.c" "/home/ethan/文档/CA_21s/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/data_type.c.o"
   )
-set(CMAKE_C_COMPILER_ID "AppleClang")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH

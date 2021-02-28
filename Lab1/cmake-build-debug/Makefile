@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /usr/lib/clion-2020.3.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /usr/lib/clion-2020.3.1/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1
+CMAKE_SOURCE_DIR = /home/ethan/文档/CA_21s/Lab1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ethan/文档/CA_21s/Lab1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-bu
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/lib/clion-2020.3.1/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/usr/lib/clion-2020.3.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/CMakeFiles /Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/文档/CA_21s/Lab1/cmake-build-debug/CMakeFiles /home/ethan/文档/CA_21s/Lab1/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/文档/CA_21s/Lab1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -143,32 +143,32 @@ Lab1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/build
 .PHONY : Lab1/fast
 
-data_type_32.o: data_type_32.c.o
+data_type.o: data_type.c.o
 
-.PHONY : data_type_32.o
+.PHONY : data_type.o
 
 # target to build an object file
-data_type_32.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/data_type_32.c.o
-.PHONY : data_type_32.c.o
+data_type.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/data_type.c.o
+.PHONY : data_type.c.o
 
-data_type_32.i: data_type_32.c.i
+data_type.i: data_type.c.i
 
-.PHONY : data_type_32.i
+.PHONY : data_type.i
 
 # target to preprocess a source file
-data_type_32.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/data_type_32.c.i
-.PHONY : data_type_32.c.i
+data_type.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/data_type.c.i
+.PHONY : data_type.c.i
 
-data_type_32.s: data_type_32.c.s
+data_type.s: data_type.c.s
 
-.PHONY : data_type_32.s
+.PHONY : data_type.s
 
 # target to generate assembly for a file
-data_type_32.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/data_type_32.c.s
-.PHONY : data_type_32.c.s
+data_type.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/data_type.c.s
+.PHONY : data_type.c.s
 
 # Help Target
 help:
@@ -179,9 +179,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Lab1"
-	@echo "... data_type_32.o"
-	@echo "... data_type_32.i"
-	@echo "... data_type_32.s"
+	@echo "... data_type.o"
+	@echo "... data_type.i"
+	@echo "... data_type.s"
 .PHONY : help
 
 
