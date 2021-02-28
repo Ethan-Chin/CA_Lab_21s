@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <time.h>
-#define GET_SIZE(data_type) printf("Size of "#data_type": %ld\n", sizeof(data_type))
+#define GET_SIZE(data_type) printf("Size of "#data_type": %ld\n", (unsigned long)sizeof(data_type))
 
 
 

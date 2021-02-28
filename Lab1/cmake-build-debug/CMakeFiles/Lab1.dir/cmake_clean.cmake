@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Lab1.dir/main.c.o"
+  "CMakeFiles/Lab1.dir/data_type_32.c.o"
   "Lab1"
   "Lab1.pdb"
 )

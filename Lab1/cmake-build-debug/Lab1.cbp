@@ -8,78 +8,80 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/ethan/文档/CA/Lab1/cmake-build-debug"/>
+				<Option working_dir="/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/ethan/文档/CA/Lab1/cmake-build-debug"/>
+				<Option working_dir="/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/ethan/文档/CA/Lab1/cmake-build-debug"/>
+				<Option working_dir="/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Lab1">
-				<Option output="/home/ethan/文档/CA/Lab1/cmake-build-debug/Lab1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/ethan/文档/CA/Lab1/cmake-build-debug"/>
+				<Option output="/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Lab1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab1"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab1"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Lab1/fast">
-				<Option output="/home/ethan/文档/CA/Lab1/cmake-build-debug/Lab1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/ethan/文档/CA/Lab1/cmake-build-debug"/>
+				<Option output="/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Lab1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab1/fast"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/ethan/文档/CA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab1/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ethan/文档/CA/Lab1/main.c">
+		<Unit filename="/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/data_type_32.c">
 			<Option target="Lab1"/>
 		</Unit>
-		<Unit filename="/home/ethan/文档/CA/Lab1/CMakeLists.txt">
+		<Unit filename="/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
