@@ -1,3 +1,0 @@
-/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/chenyc/Documents/2021Spring/CS110/CA_21s/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir
