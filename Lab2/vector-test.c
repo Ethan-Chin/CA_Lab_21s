@@ -42,7 +42,32 @@ int main(int argc, char **argv) {
     printf("0 = %d\n", vector_get(v, 501));
     printf("3 = %d\n", vector_get(v, 500));
 
+
     vector_delete(v);
+
+
+//    printf("Calling bad_vector_new()\n");
+//    v = bad_vector_new();
+///*    int* temp = v->data;
+//    int temp1 = *v->data;
+//    int temp2 = v->size;
+//*/
+//    printf("YES!\n");
+//    vector_delete(v);
+//
+//
+//    /*int* tt_main = test();
+//
+//    printf("%d", *tt_main);*/
+//
+////    vector_t v1;
+////    printf("Calling also_bad_vector_new()\n");
+////    v1 = also_bad_vector_new();
+////
+////
+////    int* temp = v1.data;
+////
+////    printf("YES!\n");
 
     printf("Test complete.\n");
 

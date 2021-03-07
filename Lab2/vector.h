@@ -40,6 +40,9 @@ typedef struct vector_t vector_t;
  *  have access to.
  */
 
+vector_t *bad_vector_new();
+vector_t also_bad_vector_new();
+
 /* Create a new vector */
 vector_t *vector_new();
 
