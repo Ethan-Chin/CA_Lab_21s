@@ -8,7 +8,7 @@
    | ----- | ------------------------------------------------------------ |
    | .data | Store subsequent items in the static segment at the next available address. |
    | .text | Store subsequent instructions in the text segment at the next available address. |
-   | .byte | Store listed values as 8-bit bytes.                          |
+   | .word | Store listed values as unaligned 32-bit words.               |
 
    
 
