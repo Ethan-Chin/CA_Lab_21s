@@ -20,8 +20,12 @@ main:	jal	create_default_list
 
 	#issue the map call
 	add	a1, s1, zero	# load the address of the first node into a1
-	# load the address of the function into a2 (check out la)
-	### YOUR CODE HERE ###
+
+
+# load the address of the function into a2 (check out la)
+	la  a2, square  ##############################################
+
+
 	jal	map
 
 	# print "list after: "
@@ -48,17 +52,17 @@ map:
 
 	# remember that each node is 8 bytes long: 4 for the value followed by 4 for the pointer to next
 	# load the value of the current node into a1
-	### YOUR CODE HERE ###
+	lw  a1, 0(s1)
 	# call the function on that value.
-	### YOUR CODE HERE ###
+	jalr    s2
 	# store the returned value back into the node
-	### YOUR CODE HERE ###
+	sw  a0, 0(s1)
 	# load the address of the next node into a1
-	### YOUR CODE HERE ###
+	lw  a1, 4(s1)
 	# put the address of the function back into a2 to prepare for the recursion
-	### YOUR CODE HERE ###
+	add a2, s2, zero
 	#recurse
-	### YOUR CODE HERE ###
+	jal map
 
 done:
 	lw	s1, 8(sp)
