@@ -277,54 +277,10 @@ end TCL_Generic;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
-    <wire from="(360,230)" to="(420,230)"/>
-    <wire from="(480,230)" to="(540,230)"/>
-    <wire from="(440,230)" to="(460,230)"/>
-    <wire from="(440,220)" to="(460,220)"/>
+    <wire from="(290,230)" to="(350,230)"/>
+    <wire from="(470,230)" to="(540,230)"/>
     <comp lib="8" loc="(435,128)" name="Text">
       <a name="text" val="PUT CIRCUITRY HERE"/>
-    </comp>
-    <comp lib="0" loc="(420,230)" name="Splitter">
-      <a name="incoming" val="16"/>
-      <a name="appear" val="center"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
-      <a name="bit5" val="0"/>
-      <a name="bit6" val="0"/>
-      <a name="bit7" val="0"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
-    </comp>
-    <comp lib="0" loc="(480,230)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="incoming" val="16"/>
-      <a name="appear" val="center"/>
-      <a name="bit0" val="1"/>
-      <a name="bit2" val="1"/>
-      <a name="bit3" val="1"/>
-      <a name="bit4" val="1"/>
-      <a name="bit5" val="1"/>
-      <a name="bit6" val="1"/>
-      <a name="bit7" val="1"/>
-      <a name="bit8" val="0"/>
-      <a name="bit9" val="0"/>
-      <a name="bit10" val="0"/>
-      <a name="bit11" val="0"/>
-      <a name="bit12" val="0"/>
-      <a name="bit13" val="0"/>
-      <a name="bit14" val="0"/>
-      <a name="bit15" val="0"/>
-    </comp>
-    <comp lib="0" loc="(360,230)" name="Pin">
-      <a name="width" val="16"/>
     </comp>
     <comp lib="0" loc="(540,230)" name="Pin">
       <a name="facing" val="west"/>
@@ -332,6 +288,11 @@ end TCL_Generic;
       <a name="width" val="16"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(290,230)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp loc="(410,230)" name="rot4"/>
+    <comp loc="(470,230)" name="rot4"/>
   </circuit>
   <circuit name="rot4">
     <a name="circuit" val="rot4"/>
@@ -340,53 +301,12 @@ end TCL_Generic;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
-    <wire from="(360,230)" to="(420,230)"/>
-    <wire from="(480,230)" to="(540,230)"/>
-    <wire from="(440,230)" to="(460,230)"/>
-    <wire from="(440,220)" to="(460,220)"/>
+    <wire from="(290,230)" to="(350,230)"/>
+    <wire from="(470,230)" to="(540,230)"/>
     <comp lib="8" loc="(431,132)" name="Text">
       <a name="text" val="PUT CIRCUITRY HERE"/>
     </comp>
-    <comp lib="0" loc="(480,230)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="incoming" val="16"/>
-      <a name="appear" val="center"/>
-      <a name="bit0" val="1"/>
-      <a name="bit2" val="1"/>
-      <a name="bit3" val="1"/>
-      <a name="bit4" val="1"/>
-      <a name="bit5" val="1"/>
-      <a name="bit6" val="1"/>
-      <a name="bit7" val="1"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="0"/>
-      <a name="bit13" val="0"/>
-      <a name="bit14" val="0"/>
-      <a name="bit15" val="0"/>
-    </comp>
-    <comp lib="0" loc="(420,230)" name="Splitter">
-      <a name="incoming" val="16"/>
-      <a name="appear" val="center"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="1"/>
-      <a name="bit5" val="1"/>
-      <a name="bit6" val="1"/>
-      <a name="bit7" val="1"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
-    </comp>
-    <comp lib="0" loc="(360,230)" name="Pin">
+    <comp lib="0" loc="(290,230)" name="Pin">
       <a name="width" val="16"/>
     </comp>
     <comp lib="0" loc="(540,230)" name="Pin">
@@ -395,6 +315,8 @@ end TCL_Generic;
       <a name="width" val="16"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp loc="(410,230)" name="rot2"/>
+    <comp loc="(470,230)" name="rot2"/>
   </circuit>
   <circuit name="rot2">
     <a name="circuit" val="rot2"/>
@@ -403,51 +325,10 @@ end TCL_Generic;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
-    <wire from="(360,230)" to="(420,230)"/>
-    <wire from="(480,230)" to="(540,230)"/>
-    <wire from="(440,230)" to="(460,230)"/>
-    <wire from="(440,220)" to="(460,220)"/>
+    <wire from="(290,230)" to="(350,230)"/>
+    <wire from="(470,230)" to="(540,230)"/>
     <comp lib="8" loc="(433,131)" name="Text">
       <a name="text" val="PUT CIRCUITRY HERE"/>
-    </comp>
-    <comp lib="0" loc="(480,230)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="incoming" val="16"/>
-      <a name="appear" val="center"/>
-      <a name="bit0" val="1"/>
-      <a name="bit2" val="1"/>
-      <a name="bit3" val="1"/>
-      <a name="bit4" val="1"/>
-      <a name="bit5" val="1"/>
-      <a name="bit6" val="1"/>
-      <a name="bit7" val="1"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="0"/>
-      <a name="bit15" val="0"/>
-    </comp>
-    <comp lib="0" loc="(420,230)" name="Splitter">
-      <a name="incoming" val="16"/>
-      <a name="appear" val="center"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="1"/>
-      <a name="bit3" val="1"/>
-      <a name="bit4" val="1"/>
-      <a name="bit5" val="1"/>
-      <a name="bit6" val="1"/>
-      <a name="bit7" val="1"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
     </comp>
     <comp lib="0" loc="(540,230)" name="Pin">
       <a name="facing" val="west"/>
@@ -455,9 +336,11 @@ end TCL_Generic;
       <a name="width" val="16"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(360,230)" name="Pin">
+    <comp lib="0" loc="(290,230)" name="Pin">
       <a name="width" val="16"/>
     </comp>
+    <comp loc="(410,230)" name="rot1"/>
+    <comp loc="(470,230)" name="rot1"/>
   </circuit>
   <circuit name="rot1">
     <a name="circuit" val="rot1"/>
