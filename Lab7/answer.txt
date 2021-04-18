@@ -1,0 +1,14 @@
+ex1：
+10+45<10+60
+10+60+45+10=125ns
+clk2q mul add setup
+
+ex2：
+10+60+10=80
+10+45+10=65
+new time=80ns
+
+Bubble will only be used when set up time is too long and next calculation's value will arraive at the register when last value is still be set up.
+So in that case, we need to slow down next calculation to avoid conflict.
+But in this case, above circumstance doesn't exist.
+
