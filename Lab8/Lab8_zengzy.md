@@ -70,3 +70,17 @@
    2. 对于jki，相当于对于B的一列，遍历A中所有行，算出C的某一列。
       1. 奇怪，按理来说不应该呀，jki应该和ikj差不多才对？——待确认？
 
+## Exercise 3:
+
+我觉得这里block加速的本质是spatial locality，就是每次miss的时候会读一整条cache line进来，分block操作就可以把一次把整条cache line对应的数据都操作完，增加数据的利用率
+
+1. ![Snap 2021-04-25 at 21.26.49](Snap 2021-04-25 at 21.26.49.png)
+   1. 在n=100时没差别，可能是因为这时候本身就可以把整个matrix读到cache里，怎么操作都没区别
+   2. 之后的话，当n=1000及以上时，就能看出区别了。这时候block就能最大化spatial locality
+
+
+
+2. ![Snap 2021-04-25 at 21.30.32](Snap 2021-04-25 at 21.30.32.png)
+   1. 这边block size=100时效率最高，可能因为cache的容量正好在100附近，正好一次都读进来然后操作完。
+   2. block size太小会导致内两层循环太少，还没操作完cache里所有数据就换到下一个block了，没法最大化spatial locality。block size太大会导致外两层循环次数太少，每个block内反复flush cache，有些数据还没完全用完就被flush掉了，也没最大化spatial locality。
+
