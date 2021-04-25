@@ -59,4 +59,14 @@
 
 ![image-20210425204149844](image-20210425204149844.png)
 
-1. 
+​	Remark: it can be viewed as a flatten mat, for C, i is row and j is col
+
+1. Which ordering(s) perform best for 1000-by-1000 matrices?
+   1. jki
+2. Which ordering(s) perform the worst?
+   1. ikj
+3. How does the way we stride through the matrices with respect to the innermost loop affect performance?
+   1. C矩阵的每一个元素，来自A的一行和B的一列相乘。所以最高效的方法应该是对于A的一行(或者B的一列)，遍历B的所有列(或者A的所有行)，算出C的某一行(或者某一列)。这样的话，A的那一行(或者B的一列)可以一直存在cache里，直到这个矩阵相乘里，针对它的操作全部结束。
+   2. 对于jki，相当于对于B的一列，遍历A中所有行，算出C的某一列。
+      1. 奇怪，按理来说不应该呀，jki应该和ikj差不多才对？——待确认？
+
