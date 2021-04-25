@@ -2,21 +2,18 @@
 
 ### Scenario 1:
 
-0. Associativity: 1 (Venus won't let you change this, why?)
-   1. there is only one cache line
-
 ![image-20210425164331022](image-20210425164331022.png)
 
 1. What combination of parameters is producing the hit rate you observe? (Hint: Your answer should be the process of your calculation.)
 
-   1. hit rate=0, cache data will be replace before next loop to use it
+   - hit rate=0. For this instance, the stepsize is 8 words, and the #blocks is 4, block size is 2 words. So when the *stepwise(words)* is a multiple of *block size(words) \* #blocks*, we will repeatedly evict the first block and get a cache miss.
 2. What is our hit rate if we increase Rep Count arbitrarily? Why?
 
-   1. still 0
+   - still 0. Because whatever the rep count is, we will only use the first block and repeatedly get a miss due to the above relation. (Unless we just only access the first word and increase rep count, then the hit rate will increas in this trival situation).
 
 3. How could we modify our program parameters to maximize our hit rate?
 
-   1. array size=32
+   - set the stepsize to 1(word), then we get the max hit rate of 0.5.
 
    
 
