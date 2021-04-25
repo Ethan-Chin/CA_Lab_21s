@@ -66,13 +66,18 @@
 2. Which ordering(s) perform the worst?
    1. ikj
 3. How does the way we stride through the matrices with respect to the innermost loop affect performance?
-   1. C矩阵的每一个元素，来自A的一行和B的一列相乘。所以最高效的方法应该是对于A的一行(或者B的一列)，遍历B的所有列(或者A的所有行)，算出C的某一行(或者某一列)。这样的话，A的那一行(或者B的一列)可以一直存在cache里，直到这个矩阵相乘里，针对它的操作全部结束。
-   2. 对于jki，相当于对于B的一列，遍历A中所有行，算出C的某一列。
-      1. 奇怪，按理来说不应该呀，jki应该和ikj差不多才对？——待确认？
+   1. 理论上，C矩阵的每一个元素，来自A的一行和B的一列相乘。所以最高效的方法应该是对于A的一行(或者B的一列)，遍历B的所有列(或者A的所有行)，算出C的某一行(或者某一列)。这样的话，A的那一行(或者B的一列)可以一直存在cache里，直到这个矩阵相乘里，针对它的操作全部结束。
+   2. 但是这里使用c语言的一维数组实现的，相当于被flatten了的matrix。如下图ikj是最慢的，因为fix i之后，遍历j，第一次j=0，第二次j=1，C差了1000，相邻的元素不在同一个cache block里，每次都会miss都要重新读取。反之，对于jki的话，最内层遍历i，C每次差1，相邻元素在同一个cache block里，可以大幅增加hit的次数。其它的同理。
+
+![Snap 2021-04-25 at 22.08.49](Snap 2021-04-25 at 22.08.49.png)
+
+
 
 ## Exercise 3:
 
 我觉得这里block加速的本质是spatial locality，就是每次miss的时候会读一整条cache line进来，分block操作就可以把一次把整条cache line对应的数据都操作完，增加数据的利用率
+
+​	每次miss的时候，读数据是读一条cache line进来，分block操作就可以把一次把整条cache line对应的数据都操作完，增加数据的利用率
 
 1. ![Snap 2021-04-25 at 21.26.49](Snap 2021-04-25 at 21.26.49.png)
    1. 在n=100时没差别，可能是因为这时候本身就可以把整个matrix读到cache里，怎么操作都没区别
