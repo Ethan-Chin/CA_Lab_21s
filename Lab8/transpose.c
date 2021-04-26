@@ -15,15 +15,23 @@ void transpose_naive(int n, int blocksize, int *dst, int *src) {
 /* Implement cache blocking below. You should NOT assume that n is a
  * multiple of the block size. */
 void transpose_blocking(int n, int blocksize, int *dst, int *src) {
+
+	int i_blocksize = blocksize;
+	int j_blocksize = blocksize;
+	
     for (int i = 0; i < n; i += blocksize) {
+		if (i + blocksize >= n) i_blocksize = n - i;
+		
         for (int j = 0; j < n; j += blocksize) {
         // transpose the block beginning at [i,j]
-            for (int k = i; k < i + blocksize; ++k) {
-                for (int l = j; l < j + blocksize; ++l) {
+			if (j + blocksize >= n) j_blocksize = n - j;
+            for (int k = i; k < i + i_blocksize; ++k) {
+                for (int l = j; l < j + j_blocksize; ++l) {
                     dst[k + l*n] = src[l + k*n];
                 }
             }
         }
+        j_blocksize = blocksize;
     }
 } 
 

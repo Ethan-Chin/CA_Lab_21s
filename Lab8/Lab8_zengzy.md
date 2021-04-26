@@ -21,34 +21,51 @@
 
 1. What combination of parameters is producing the hit rate you observe? (Hint: Your answer should be the process of your calculation.)
 
-   1. Hit rate=0.75	size=256, go through once, block size=16, 256/16=16, so 16 times load block, Compulsory miss=16
+   - Hit rate=0.75	size=256, go through once, block size=16, 256/16=16, so 16 times load block, Compulsory miss=16
 
-      times of word loop=32, each loop need to read and write, 32*2=64, so accesses 64 times
 
-      cache can exactly be filled with all data it needed (cache size=256)
+   times of word loop=32, each loop need to read and write, 32*2=64, so accesses 64 times
+
+   cache can exactly be filled with all data it needed (cache size=256)
 
    ![image-20210425165205749](image-20210425165205749.png)
 
 2. What happens to our hit rate as Rep Count goes to infinity? Why?
 
-   1. 1, since cache can exactly be filled with all data it needed, and compulsory miss will be ignore
+   - since cache can exactly be filled with all data it needed, and compulsory miss will be ignore, so the hit rate will approach to 1.
 
 3. Suppose we have a program that uses a very large array and during each Rep, we apply a different operator to the elements of our array (e.g. if Rep Count = 1024, we apply 1024 different operations to each of the array elements). How can we restructure our program to achieve a hit rate like that achieved in this scenario? (Assume that the number of operations we apply to each element is very large and that the result for each element can be computed independently of the other elements.) What is this technique called?
 
-   1. Cache Blocking Techniques
+   - Cache Blocking Techniques
 
-   2. ![image-20210425171121304](image-20210425171121304.png)
+   - ![image-20210425171121304](image-20210425171121304.png)
 
       之前是对于每一个body1，我把所有body2算一遍。现在是对于每一个body1，我先把body2分成、比如、10份，先把第一份body2全部算一遍，再对于每个body1，把第二份body2都算一遍。划分得当的话，每一份body2可以全部被存在cache里，对于每个body1算的时候，都是hit的。否则，全部过一遍body2的话，下一个循环开头用到的body2又被flush掉了。
 
-   3. 程序改法：还没想，暂时先跳过，不过和上面的程序差不多，尽量划分成block，一次把整个block都算完
+   - 程序改法：将上图中的BLOCK设置成与cache的size相对应，每次对一小块能存入cache的block进行改动并循环rep次执行不同操作，执行完成后再跳入下一个block重复操作。原程序改动后如下：
+
+     ```c
+     for (index_block = 0; index_block < arraysize; index_block += cachesize (in WORDS))
+     {
+       for (k = 0; k < repcount; k++) {                // repeat repcount times
+       // Step through the selected array segment with the given step size.
+         for (index = index_block; index < index_block + cachesize (in WORDS); index++) {
+           if(option==0)
+             array[index] = 0;                   // Option 0: One cache access - write
+           else
+             array[index] = array[index] + 1;    // Option 1: Two cache accesses - read AND write
+             }
+       }
+     }
+     ```
 
 ### Scenario 3:
 
 1. Run the simulation a few times. Every time, set a different seed value (bottom of the cache window). Note that the hit rate is non-deterministic. What is the range of its hit rate? Why is this the case? ("The cache eviction is random" is not a sufficient answer)
-     1. Five experiments: 0.3125，0.25，0.1875，0.4375，0.375，so the range is approximately between 0.1875-0.4375，and theoretically range is between 0 (always flush one block resulting miss every time)-0.5 (the same as LRU)
-     2. 这里的random应该是cache就算还没满，也是随便找一个flush掉，所以会出现cache还没满但是把有数据的cache给flush掉的情况——待确认？
-
+     - Five experiments: 0.3125，0.25，0.1875，0.4375，0.375，so the range is approximately between 0.1875-0.4375，and theoretically range is between 0 (always flush one block resulting miss every time)-0.5 (the same as LRU)
+     - 这里的random应该是cache就算还没满，也是随便找一个flush掉，所以会出现cache还没满但是把有数据的cache给flush掉的情况？
+  - ————>Random下无论cache是不是cold start的状态，都是随机在set中找一个chacheline进行evict后写入。所以这里Random下，只用了set00和set10，4-way的set分别进行4次查找，第一次rep循环过后能留存在cache中的data是不确定的，而第二次rep能hit的data也是不确定的，并且第二次rep在遇到miss时也会令cache中的data产生随机变动。
+     
 2. Which Cache parameter can you modify in order to get a constant hit rate? Record the parameter and its value (and be prepared to show your TA a few runs of the simulation). How does this parameter allow us to get a constant hit rate? And explain why the constant hit rate value is that value.
      1. We can modify random to LRU, and hit rate is 0.5——the first loop is compulsory miss, and the second loop is a all-hit loop.
 
