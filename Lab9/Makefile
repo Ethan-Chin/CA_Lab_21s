@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS= -O2 -std=gnu99
+CFLAGS= -O0 -std=gnu99
 
 all: sum
 sum: sum.c
