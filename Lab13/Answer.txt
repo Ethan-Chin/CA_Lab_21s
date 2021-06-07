@@ -1,0 +1,18 @@
+Ex1:
+Given the way the address was broken down, how big are the pages in this model?
+	5 bit for offset, 32 byte per page
+How many TLB Hits and Misses did we have for the randomly generated set of ten addresses? What about for Page Hits and Page Faults?
+	Mine TLB is 5 hits and 5 misses, page hits=0, page faults=5
+Did you have any Page Hits? Explain why. Can you think of a set of ten addresses that would result in a Page Hit?
+	No. For the page that we have visted, if we want to visit it again, we just need to visit it in TLB instead of hitting it in Page Table.
+	No. Since physical memory has 4 frames and TLB has 4 entries. 
+	Once a page is loaded into physical memory, it also loaded into TLB. It's the same for evicting.
+	So we can never find a page which is inside physical memory but outside TLB.
+Explain the process by which we turn a virtual address into a physical address for the very first access (emphasizing on TLB Misses and Page Faults).
+	decode->TLB(not inside)->page table(not inside physical memory)->page miss->load it from disk to physical memory frame
+
+Ex2:
+	见图, 2F,4F,6F,8F,AF,2F,4F,6F,8F,AF
+
+Ex3:
+	Change physical memory to 5 frames, 10 TLB misses, 5 Page misses
